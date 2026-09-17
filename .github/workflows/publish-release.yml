@@ -25,7 +25,7 @@ jobs:
           apk="Screen-Awake-${version}.apk"
           checksum="${apk}.sha256"
           notes="RELEASE_NOTES_${version}.md"
-          base="https://raw.githubusercontent.com/${REPO}/${TAG}"
+          base="https://raw.githubusercontent.com/${REPO}/${GITHUB_SHA}"
           curl -fsSL "${base}/${apk}" -o "${apk}"
           curl -fsSL "${base}/${checksum}" -o "${checksum}"
           curl -fsSL "${base}/${notes}" -o "${notes}"
