@@ -1,0 +1,65 @@
+name: Publish tagged release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish GitHub Release from tagged files
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          API_URL: ${{ github.api_url }}
+        run: |
+          set -euo pipefail
+          version="${TAG#v}"
+          apk="Screen-Awake-${version}.apk"
+          checksum="${apk}.sha256"
+          notes="RELEASE_NOTES_${version}.md"
+          base="https://raw.githubusercontent.com/${REPO}/${TAG}"
+          curl -fsSL "${base}/${apk}" -o "${apk}"
+          curl -fsSL "${base}/${checksum}" -o "${checksum}"
+          curl -fsSL "${base}/${notes}" -o "${notes}"
+
+          prerelease=false
+          case "${version}" in
+            *preview*|*alpha*|*beta*|*rc*) prerelease=true ;;
+          esac
+
+          payload="$(jq -n \
+            --arg tag "${TAG}" \
+            --arg name "Screen Awake ${version}" \
+            --arg body "$(cat "${notes}")" \
+            --argjson prerelease "${prerelease}" \
+            '{tag_name:$tag,name:$name,body:$body,draft:false,prerelease:$prerelease}')"
+
+          response="$(curl -fsS -X POST \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            -d "${payload}" \
+            "${API_URL}/repos/${REPO}/releases")"
+          upload_url="$(jq -r '.upload_url' <<<"${response}" | sed 's/{?name,label}//')"
+
+          curl -fsS -X POST \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H 'Content-Type: application/vnd.android.package-archive' \
+            --data-binary "@${apk}" \
+            "${upload_url}?name=${apk}" >/dev/null
+
+          curl -fsS -X POST \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H 'Content-Type: text/plain' \
+            --data-binary "@${checksum}" \
+            "${upload_url}?name=${checksum}" >/dev/null
+
+          echo "Published ${TAG}"
