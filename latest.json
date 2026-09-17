@@ -1,11 +1,11 @@
 {
-  "version": "0.1.3-preview",
-  "versionCode": 4,
+  "version": "0.1.4-preview",
+  "versionCode": 5,
   "packageId": "com.kroxaboom.screenawake",
   "minAndroid": 13,
   "minSdk": 33,
   "targetSdk": 37,
-  "file": "Screen-Awake-0.1.3-preview.apk",
-  "sha256": "01d455b599daab7e36fc95df3cd001f553403b872c0dd1d4fcbee8f7e8a76544",
-  "size": 57964
+  "file": "Screen-Awake-0.1.4-preview.apk",
+  "sha256": "7d2bb01e799b7158409bb0fd51e5f7341457ebe2f3131859159d16f2489f0556",
+  "size": 49780
 }
