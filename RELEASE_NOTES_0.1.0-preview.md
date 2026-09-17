@@ -12,7 +12,7 @@
 - Русский и английский интерфейс.
 - Светлая и тёмная темы.
 - Без сторонних runtime-библиотек и SDK.
-- Проверено параллельно на Android 13, 14, 15 и 16.
+- Проверено параллельно на Android 13, 14, 15 и 16, включая работу после ухода приложения в фон.
 
 ## English
 
@@ -26,4 +26,4 @@ First working preview release.
 - Russian and English UI.
 - Light and dark themes.
 - No third-party runtime libraries or SDKs.
-- Tested in parallel on Android 13, 14, 15, and 16.
+- Tested in parallel on Android 13, 14, 15, and 16, including operation after the app moves to the background.
