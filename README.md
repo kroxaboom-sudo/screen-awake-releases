@@ -4,11 +4,11 @@
 
 ## Последняя версия
 
-**0.1.2-preview** (`versionCode 3`)
+**0.1.3-preview** (`versionCode 4`)
 
 - Android 13 и новее (`minSdk 33`).
 - Package ID: `com.kroxaboom.screenawake`.
-- APK: `Screen-Awake-0.1.2-preview.apk`.
+- APK: `Screen-Awake-0.1.3-preview.apk`.
 - SHA-256 публикуется рядом в `.sha256` и в `latest.json`.
 - Начиная с 0.1.1-preview доступно безопасное обновление прямо из приложения.
 
@@ -16,4 +16,4 @@
 
 ## English
 
-Official Android builds of Screen Awake. The current preview is `0.1.2-preview`, supports Android 13+, and is distributed together with a SHA-256 checksum and machine-readable `latest.json` metadata.
+Official Android builds of Screen Awake. The current preview is `0.1.3-preview`, supports Android 13+, and is distributed together with a SHA-256 checksum and machine-readable `latest.json` metadata.
