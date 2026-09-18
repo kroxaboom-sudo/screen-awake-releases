@@ -1,19 +1,35 @@
-# Screen Awake — Android releases
+# Screen Awake releases
 
-Официальные сборки Screen Awake для Android.
+Официальные сборки Screen Awake для Android 13+.
 
-## Последняя версия
+## Редакции
 
-**0.1.8-preview** (`versionCode 9`)
+### Screen Awake
 
-- Android 13 и новее (`minSdk 33`).
-- Package ID: `com.kroxaboom.screenawake`.
-- APK: `Screen-Awake-0.1.8-preview.apk`.
-- SHA-256 публикуется рядом в `.sha256` и в `latest.json`.
-- Начиная с 0.1.1-preview доступно безопасное обновление прямо из приложения.
+Основная редакция со статистикой, диагностикой и опциональной анонимной телеметрией.
 
-Перед публикацией APK проходит строгий Android Lint и параллельную smoke-матрицу Android 13 / 14 / 15 / 16.
+<!-- FULL_CURRENT_START -->
+**Full: 0.1.8-preview** (`versionCode 9`)
+APK: `Screen-Awake-0.1.8-preview.apk`
+<!-- FULL_CURRENT_END -->
+
+Package ID: `com.kroxaboom.screenawake`
+Канал обновлений: `latest.json`
+
+### Screen Awake Lite
+
+Облегчённая редакция: удержание экрана, восстановление тайм-аута, уведомление, Quick Settings и безопасные обновления. Статистика, диагностика и телеметрия не включаются.
+
+<!-- LITE_CURRENT_START -->
+**Lite: ещё не выпущена** (`versionCode —`)
+APK: —
+<!-- LITE_CURRENT_END -->
+
+Package ID: `com.kroxaboom.screenawake.lite`
+Канал обновлений: `latest-lite.json`
+
+Обе редакции можно устанавливать одновременно. APK публикуются с SHA-256 и проходят Android Lint и smoke-матрицу Android 13 / 14 / 15 / 16.
 
 ## English
 
-Official Android builds of Screen Awake. The current preview is `0.1.8-preview`, supports Android 13+, and is distributed together with a SHA-256 checksum and machine-readable `latest.json` metadata.
+Screen Awake is distributed in two independently installable Android 13+ editions. Full keeps diagnostics and statistics; Lite contains only the shared core functionality. Each edition has its own package ID, update feed, release tags and verified APKs.

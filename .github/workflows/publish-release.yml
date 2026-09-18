@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+      - 'lite-v*'
 
 permissions:
   contents: write
@@ -21,10 +22,18 @@ jobs:
           API_URL: ${{ github.api_url }}
         run: |
           set -euo pipefail
-          version="${TAG#v}"
-          apk="Screen-Awake-${version}.apk"
+          if [[ "${TAG}" == lite-v* ]]; then
+            version="${TAG#lite-v}"
+            apk="Screen-Awake-Lite-${version}.apk"
+            notes="RELEASE_NOTES_LITE_${version}.md"
+            release_name="Screen Awake Lite ${version}"
+          else
+            version="${TAG#v}"
+            apk="Screen-Awake-${version}.apk"
+            notes="RELEASE_NOTES_${version}.md"
+            release_name="Screen Awake ${version}"
+          fi
           checksum="${apk}.sha256"
-          notes="RELEASE_NOTES_${version}.md"
           base="https://raw.githubusercontent.com/${REPO}/${GITHUB_SHA}"
           curl -fsSL "${base}/${apk}" -o "${apk}"
           curl -fsSL "${base}/${checksum}" -o "${checksum}"
@@ -36,7 +45,7 @@ jobs:
           esac
 
           common="$(jq -n \
-            --arg name "Screen Awake ${version}" \
+            --arg name "${release_name}" \
             --arg body "$(cat "${notes}")" \
             --argjson prerelease "${prerelease}" \
             '{name:$name,body:$body,draft:false,prerelease:$prerelease}')"
