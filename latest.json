@@ -1,13 +1,13 @@
 {
   "edition": "full",
-  "version": "0.1.13-preview",
-  "versionCode": 14,
+  "version": "0.1.14-preview",
+  "versionCode": 15,
   "packageId": "com.kroxaboom.screenawake",
   "minAndroid": 13,
   "minSdk": 33,
   "targetSdk": 37,
-  "tag": "v0.1.13-preview",
-  "file": "Screen-Awake-0.1.13-preview.apk",
-  "sha256": "398947f30b389578f5af776fb584de08a471d65f6186dca008c161a6a9aa6230",
-  "size": 153733
+  "tag": "v0.1.14-preview",
+  "file": "Screen-Awake-0.1.14-preview.apk",
+  "sha256": "92f16d0e8d9baaadb1ffcc9e03f5968e501d4103812f08254577c9b456cdf58a",
+  "size": 154861
 }
