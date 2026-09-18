@@ -1,13 +1,13 @@
 {
   "edition": "lite",
-  "version": "0.1.3-preview",
-  "versionCode": 4,
+  "version": "0.1.4-preview",
+  "versionCode": 5,
   "packageId": "com.kroxaboom.screenawake.lite",
   "minAndroid": 13,
   "minSdk": 33,
   "targetSdk": 37,
-  "tag": "lite-v0.1.3-preview",
-  "file": "Screen-Awake-Lite-0.1.3-preview.apk",
-  "sha256": "89bace0dc914484818bf7152ae621e22604b86be81c242186159c0e83eecdace",
-  "size": 111960
+  "tag": "lite-v0.1.4-preview",
+  "file": "Screen-Awake-Lite-0.1.4-preview.apk",
+  "sha256": "e806086b9e8d30ee497e444630e57837928603ab084489e9cfeb97a2abd000f3",
+  "size": 111924
 }
