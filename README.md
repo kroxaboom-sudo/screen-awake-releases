@@ -21,8 +21,8 @@ Package ID: `com.kroxaboom.screenawake`
 Облегчённая редакция: удержание экрана, восстановление тайм-аута, уведомление, Quick Settings и безопасные обновления. Статистика, диагностика и телеметрия не включаются.
 
 <!-- LITE_CURRENT_START -->
-**Lite: ещё не выпущена** (`versionCode —`)
-APK: —
+**Lite: 0.1.0-preview** (`versionCode 1`)  
+APK: `Screen-Awake-Lite-0.1.0-preview.apk`
 <!-- LITE_CURRENT_END -->
 
 Package ID: `com.kroxaboom.screenawake.lite`
