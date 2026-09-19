@@ -6,7 +6,7 @@
 
 ### Screen Awake
 
-Основная редакция со статистикой, диагностикой и опциональной анонимной телеметрией.
+Основная редакция с общим Core, расширенной локальной диагностикой и статистикой, а также единым Observability Core.
 
 <!-- FULL_CURRENT_START -->
 **Full: 0.1.16-preview** (`versionCode 17`)  
@@ -18,7 +18,7 @@ Package ID: `com.kroxaboom.screenawake`
 
 ### Screen Awake Lite
 
-Облегчённая редакция: удержание экрана, восстановление тайм-аута, уведомление, Quick Settings и безопасные обновления. Статистика, диагностика и телеметрия не включаются.
+Облегчённая редакция: общий Core, удержание экрана, восстановление тайм-аута, уведомление, Quick Settings, безопасные обновления и тот же обязательный Observability Core. Минимальная ESSENTIAL-диагностика работает по общим правилам приватности, EXTENDED управляется пользователем; Full-only экраны подробной диагностики и локальной статистики не включаются.
 
 <!-- LITE_CURRENT_START -->
 **Lite: 0.1.7-preview** (`versionCode 8`)  
@@ -32,4 +32,4 @@ Package ID: `com.kroxaboom.screenawake.lite`
 
 ## English
 
-Screen Awake is distributed in two independently installable Android 13+ editions. Full keeps diagnostics and statistics; Lite contains only the shared core functionality. Each edition has its own package ID, update feed, release tags and verified APKs.
+Screen Awake is distributed in two independently installable Android 13+ editions. Both use the shared first-party Core and the same mandatory Observability Core with ESSENTIAL diagnostics and user-controlled EXTENDED data. Full additionally includes detailed local diagnostics and usage statistics; Lite excludes those Full-only screens. Each edition has its own package ID, update feed, release tags and verified APKs.
