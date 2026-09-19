@@ -9,8 +9,8 @@
 Основная редакция со статистикой, диагностикой и опциональной анонимной телеметрией.
 
 <!-- FULL_CURRENT_START -->
-**Full: 0.1.15-preview** (`versionCode 16`)  
-APK: `Screen-Awake-0.1.15-preview.apk`
+**Full: 0.1.16-preview** (`versionCode 17`)  
+APK: `Screen-Awake-0.1.16-preview.apk`
 <!-- FULL_CURRENT_END -->
 
 Package ID: `com.kroxaboom.screenawake`
