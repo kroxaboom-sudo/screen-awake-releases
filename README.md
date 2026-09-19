@@ -9,8 +9,8 @@
 Основная редакция с общим Core, расширенной локальной диагностикой и статистикой, а также единым Observability Core.
 
 <!-- FULL_CURRENT_START -->
-**Full: 0.1.16-preview** (`versionCode 17`)  
-APK: `Screen-Awake-0.1.16-preview.apk`
+**Full: 0.1.17-preview** (`versionCode 18`)  
+APK: `Screen-Awake-0.1.17-preview.apk`
 <!-- FULL_CURRENT_END -->
 
 Package ID: `com.kroxaboom.screenawake`
